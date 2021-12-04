@@ -4,7 +4,7 @@
 
 const int NUM_LEN = 12;
 
-int binToDec(int *digits, int len) {
+int binToDec(const int *digits, int len) {
     int res = digits[0];
     for (int i = 1; i < len; i++) {
         res = res * 2 + digits[i];
