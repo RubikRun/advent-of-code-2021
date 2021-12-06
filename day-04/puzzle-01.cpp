@@ -62,7 +62,7 @@ private:
     int colMarkCnt[BOARD_SIZE] = {0};
 };
 
-int getWinScore(Board boards[], int draws[]) {
+int getFirstWinScore(Board boards[], int draws[]) {
     for (int drawInd = 0; drawInd < DRAWS_CNT; drawInd++) {
         int draw = draws[drawInd];
 
@@ -92,7 +92,7 @@ int main()
         boards[i].read(file);
     }
 
-    std::cout << getWinScore(boards, draws) << std::endl;
+    std::cout << getFirstWinScore(boards, draws) << std::endl;
 
     file.close();
     if (file.is_open()) {
